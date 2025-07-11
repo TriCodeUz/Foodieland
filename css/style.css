@@ -1,13 +1,23 @@
 @font-face {
     font-family: "system-ui";
-    src: url();
+    src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 }
 
 :root {
-    --main-color: #000;
+    --main-color: #222;
     --color-white: #fff;
     --color-dark: #333;
-    --color-shadow: #777;
+    --color-shadow: #21232a13;
+    --color-text: #58595D;
+    --color-orange: #FF6D2C;
+    --color-blue: #009387;
+    --color-light-blue: #E0F8F2;
+    --color-light-pink: #FDF3EA;
+    --color-light-gray: #E7FAFE;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 * {
@@ -18,7 +28,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: "system-ui";
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .section-wrapper {
@@ -29,4 +39,53 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 2%;
+}
+
+header {
+    padding: 30px 0;
+    background-color: var(--color-white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 1px 0px var(--color-shadow);
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav_menu li a {
+    color: var(--main-color);
+}
+
+.header_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+i {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+i:active {
+    scale: 0.9;
+}
+
+.toggle_bar {
+    z-index: 1000;
+    display: none;
 }
